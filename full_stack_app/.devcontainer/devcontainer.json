@@ -82,4 +82,6 @@
     // "shutdownAction": "none",
     // Uncomment the next line to run commands after the container is created.
     "postCreateCommand": "cat .devcontainer/bashrc.override.sh >> ~/.bashrc"
+
+
 }
