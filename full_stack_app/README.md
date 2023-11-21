@@ -8,7 +8,7 @@ git clone https://github.com/tomtheaint/full-stack.app
 sudo /home/$USER/.docker/cli-plugins/docker-compose -f local.yml up
 
 
-
+<!--
 
 
 [![Built with Cookiecutter Django](https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg?logo=cookiecutter)](https://github.com/cookiecutter/cookiecutter-django/)
@@ -88,3 +88,5 @@ The following details how to deploy this application.
 ### Docker
 
 See detailed [cookiecutter-django Docker documentation](http://cookiecutter-django.readthedocs.io/en/latest/deployment-with-docker.html).
+
+-->
