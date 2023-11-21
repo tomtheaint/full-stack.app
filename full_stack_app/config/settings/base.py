@@ -5,6 +5,10 @@ from pathlib import Path
 
 import environ
 
+#added to get rid of CSRF Forbidden
+CSRF_TRUSTED_ORIGINS = ['https://full-stack.app','https://*.127.0.0.1']
+
+
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 # full_stack_app/
 APPS_DIR = BASE_DIR / "full_stack_app"
