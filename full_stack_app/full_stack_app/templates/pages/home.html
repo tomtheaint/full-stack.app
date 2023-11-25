@@ -2,16 +2,8 @@
 
 {% block title %}Home Page{% endblock title %}
 {% block content %}
-  <h1>You have found the INDEX</h1>
-  <p>
-    {% if exception %}
-      {{ exception }}
-    {% else %}
-      This is not the page you were looking for.
-    {% endif %}
+  <h1>You have found INDEX</h1>
 
-    <a hx-get="{% url 'index' %}">New Page</a>
-  </p>
 
 {% endblock content %}
  
