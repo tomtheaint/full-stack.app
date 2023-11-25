@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 
-{% block title %}Home Page{% endblock title %}
+{% block title %}Index{% endblock title %}
 {% block content %}
-  <h1>You have found the INDEX</h1>
+  <h1>Index page for full-stack.app</h1>
   <p>
     {% if exception %}
       {{ exception }}
     {% else %}
       This is not the page you were looking for.
     {% endif %}
-
+</p>
     <a hx-get="{% url 'index' %}">New Page</a>
-  </p>
+  
 
 {% endblock content %}
  

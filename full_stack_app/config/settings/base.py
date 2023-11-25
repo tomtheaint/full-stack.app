@@ -6,7 +6,7 @@ from pathlib import Path
 import environ
 
 #added to get rid of CSRF Forbidden
-CSRF_TRUSTED_ORIGINS = ['https://full-stack.app','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://full-stack.app','https://full-stack.app','https://*.127.0.0.1']
 
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
@@ -85,6 +85,7 @@ THIRD_PARTY_APPS = [
     "rest_framework.authtoken",
     "corsheaders",
     "drf_spectacular",
+    "django_htmx",
 ]
 
 LOCAL_APPS = [
@@ -147,6 +148,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "allauth.account.middleware.AccountMiddleware",
+    "django_htmx.middleware.HtmxMiddleware", # add for htmx
 ]
 
 # STATIC
