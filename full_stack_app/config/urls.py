@@ -17,7 +17,7 @@ urlpatterns = [
     
     # TT removing temp code to start new index below
     #path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
-    path("", TemplateView.as_view(template_name="pages/index.html"), name="home"),
+    path("", TemplateView.as_view(template_name="pages/index.html"), name="index"),
     
     path("about/", TemplateView.as_view(template_name="pages/about.html"), name="about"),
     # Django Admin, use {% url 'admin:index' %}
@@ -41,7 +41,7 @@ urlpatterns += [
         name="api-docs",
     ),
     #this needs to be moved above TT
-    path("tasks/", views.index, name="index"),
+    #path("tasks/", views.index, name="index"),
 ]
 
 if settings.DEBUG:
