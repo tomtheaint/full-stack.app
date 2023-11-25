@@ -6,8 +6,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>
-      {% block title %}
-      Full-stack.app
+    {% block title %}
+    Full-stack.app
     {% endblock title %}
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,18 +25,12 @@
           referrerpolicy="no-referrer" />
 <!-- Your stuff: Third-party CSS libraries go here -->
 <!-- This file stores project-specific CSS -->
-
-  
   <link href="{% static 'css/project.css' %}" rel="stylesheet" />
-
-
 {% endblock css %}
 <!-- Le javascript
     ================================================== -->
 {# Placed at the top of the document so pages load faster with defer #}
 {% block javascript %}
-
-
 <!-- Bootstrap JS -->
 <script defer
         src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
@@ -56,10 +50,7 @@
 <!-- need to change for production, for htmx -->
 <script src="https://unpkg.com/htmx.org@1.9.9" integrity="sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX" crossorigin="anonymous"></script>
 <!-- place project specific Javascript in this file -->
-
-  
-  <script defer src="{% static 'js/project.js' %}"></script>
-
+<script defer src="{% static 'js/project.js' %}"></script>
 
 {% endblock javascript %}
 </head>
@@ -67,19 +58,10 @@
   
   {% block content %}
   {% endblock content %}
-  <!-- /container -->
+  <!-- Content -->
   {% block modal %}
   {% endblock modal %}
   {% block inline_javascript %}
-    {% comment %}
-    Script tags with only code, no src (defer by default). To run
-    with a "defer" so that you run inline code:
-    <script>
-      window.addEventListener('DOMContentLoaded', () => {
-        /* Run whatever you want */
-      });
-    </script>
-    {% endcomment %}
   {% endblock inline_javascript %}
 </body>
 </html>
