@@ -15,6 +15,8 @@ from full_stack_app.tasks import views
 
 urlpatterns = [
     
+    path("tasks/", views.index, name="task_index"),
+    
     # TT removing temp code to start new index below
     #path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path("", TemplateView.as_view(template_name="pages/index.html"), name="index"),
@@ -40,8 +42,7 @@ urlpatterns += [
         SpectacularSwaggerView.as_view(url_name="api-schema"),
         name="api-docs",
     ),
-    #this needs to be moved above TT
-    #path("tasks/", views.index, name="index"),
+    
 ]
 
 if settings.DEBUG:
