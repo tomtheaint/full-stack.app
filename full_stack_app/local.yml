@@ -4,8 +4,11 @@ volumes:
   full_stack_app_local_postgres_data: {}
   full_stack_app_local_postgres_data_backups: {}
 
+
+
 services:
   django: &django
+    restart: always
     build:
       context: .
       dockerfile: ./compose/local/django/Dockerfile
@@ -24,6 +27,7 @@ services:
     command: /start
 
   postgres:
+    restart: always
     build:
       context: .
       dockerfile: ./compose/production/postgres/Dockerfile
@@ -53,6 +57,7 @@ services:
 
   redis:
     image: redis:6
+    restart: always
     container_name: full_stack_app_local_redis
 
   celeryworker:
@@ -64,6 +69,7 @@ services:
       - postgres
     ports: []
     command: /start-celeryworker
+    restart: always
 
   celerybeat:
     <<: *django
@@ -73,6 +79,7 @@ services:
       - redis
       - postgres
     ports: []
+    restart: always
     command: /start-celerybeat
 
   flower:
@@ -82,3 +89,4 @@ services:
     ports:
       - '5555:5555'
     command: /start-flower
+    restart: always

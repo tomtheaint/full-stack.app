@@ -26,7 +26,7 @@ from .models import Task
 
 def index(request):
     taskList = Task.objects.order_by("name")
-    template = loader.get_template("pages/home.html")
+    template = loader.get_template("pages/index.html")
     #output = ", ".join([q.name for q in taskList])
     context = {
         "taskList": taskList,
