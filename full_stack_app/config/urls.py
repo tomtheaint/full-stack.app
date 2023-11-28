@@ -15,7 +15,9 @@ from full_stack_app.tasks import views
 
 urlpatterns = [
     
-    path("tasks/", views.index, name="task_index"),
+    # add tasks urls
+    path("tasks/", include("full_stack_app.tasks.urls")),
+    #path("tasks/", views.index, name="task_index"),
     
     # TT removing temp code to start new index below
     #path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
